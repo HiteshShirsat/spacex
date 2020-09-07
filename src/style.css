@@ -1,0 +1,286 @@
+::-webkit-scrollbar
+{
+	width:10px;
+	background: var(--a);
+	cursor: pointer;
+}
+::-webkit-scrollbar-thumb
+{
+	background: orange;
+}
+::-webkit-scrollbar-thumb:hover
+{
+	background: var(--a);
+}
+
+::selection
+{
+	/*background: transparent;*/
+}
+
+:root
+{
+	--a:#1890ff;
+	--b:#001529;
+	--c:#fbfbfb;
+}
+body
+{
+	margin:0;
+	font-family: arial;
+}
+*
+{
+	text-decoration: none;
+	font-weight: normal;
+}
+.header
+{
+	min-height: 10vh;
+	background: var(--b);
+}
+.header a
+{
+	color:var(--c);	
+	line-height: 10vh;
+	transition: 0.5s;
+	padding: 10px;
+}
+.header a:hover
+{
+	background: var(--a);
+}
+
+
+
+.footer
+{
+	line-height: 10vh;
+	background: var(--b);
+	color:white;
+	text-align: center;
+}
+
+.layout
+{
+	overflow: auto;
+	height: 80vh;
+}
+
+
+.login1
+{
+	width:20%;
+	margin:5% auto;
+	box-shadow:0 0 10px black;
+	text-align: center;
+	padding:5%;
+	background: var(--b);
+	color:white;
+	display: flex;
+	flex-flow: column;
+	text-align: left;
+}
+.login1 input
+{
+	padding: 10px;
+	width:100%;
+	display: block;
+	border:0;
+	margin-bottom: 1%;
+}
+.login1 button
+{
+	padding: 10px;
+	border:0;
+	width: 108%;
+	display: block;
+	background: orange;
+	color:white;
+	margin-top: 5%;
+}
+
+
+.signup
+{
+	width:20%;
+	margin:5% auto;
+	box-shadow:0 0 10px black;
+	text-align: center;
+	padding:5%;
+	background:;
+	color:white;
+	display: flex;
+	flex-flow: column;
+	text-align: left;
+	background: black;
+}
+.signup input
+{
+	padding: 10px;
+	width:100%;
+	display: block;
+	border:0;
+	margin-bottom: 1%;
+}
+.signup button
+{
+	padding: 10px;
+	border:0;
+	width: 108%;
+	display: block;
+	background: var(--a);
+	color:white;
+	margin-top: 5%;
+}
+
+
+/*dashboard starts*/
+.main
+{
+	/*background: purple;*/
+	height: 80vh;
+	overflow: auto;
+	display: flex;
+}
+.main .left
+{
+	width: 20vw;
+	background: var(--b);
+	color:white;
+	display: flex;
+	flex-flow: column;
+	height: 80vh;
+	overflow: auto;
+	transition: 0.5s;
+}
+.main .left.active
+{
+	transform: translateX(-20vw);
+}
+.main .left span
+{
+	display: block;
+	padding:10px;
+	cursor: pointer;
+}
+.main .left span:hover,
+.main .left span.active
+{
+	background: var(--a);
+}
+.main .right
+{
+	width:80vw;
+	overflow: auto;
+	transition: 1s;
+}
+.main .right .btn
+{
+	padding: 10px;
+	border:0;
+	margin:2%;
+}
+.main .right .btn.active
+{
+	background: var(--b);
+	color:var(--a);;
+}
+
+.main .right .content
+{
+	padding-left:2%;
+}
+/*dashboard ends*/
+.main .right.active
+{
+
+	width:85vw;
+	transform: translateX(-20vw);
+}
+
+.header,
+.footer,
+.main .left
+{
+	/*opacity: 0;*/
+}
+
+.Logout
+{
+	margin:5%;
+	padding: 5%;
+	border-left: 10px solid black;
+	background: #f2f2f2;
+}
+
+table
+{
+	width: 100%;
+}
+table thead
+{
+	background: var(--b);
+	color:var(--c);
+}
+table tbody tr:hover
+{
+	background: #f1f1f1;
+	cursor: pointer;
+}
+
+.user-flex
+{
+	display: flex;
+	flex-flow: wrap;
+}
+.user-flex .item
+{
+	width: 15%;
+	padding: 1%;
+	margin:1%;
+	border-top: 2px solid black;
+	box-shadow:0 10px 10px black;
+	word-wrap: break-word;
+}
+
+
+
+
+
+
+@media (max-width:768px)
+{
+	.signup,
+	.login1
+	{
+		width: 50%;
+		padding-right: 8%;
+
+	}
+	.main .left
+	{
+		width:30vw;
+	}
+	.main .right
+	{
+		width:70vw;
+	}
+	.main .right.active
+	{
+		width:100vw;
+		padding-left: 30vw;
+		transform: translateX(-30vw);		
+	}
+	.user-flex 
+	{
+		flex-flow: column;
+	}
+	.user-flex .item
+	{
+		width:auto;
+		margin:20px;
+		background: white;
+	}
+}
+
